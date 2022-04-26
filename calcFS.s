@@ -1,4 +1,4 @@
- * -----------------------------------------------
+/* -----------------------------------------------
 * UNIVERSIDAD DEL VALLE DE GUATEMALA
 * Fabian Estuardo Juarez Tello 21440
 * Sara Maria Perez Echeverria 21371
