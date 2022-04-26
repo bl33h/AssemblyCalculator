@@ -1,4 +1,14 @@
-    @@ codigo de assembler: se coloca en la seccion .text
+ * -----------------------------------------------
+* UNIVERSIDAD DEL VALLE DE GUATEMALA
+* Fabian Estuardo Juarez Tello 21440
+* Sara Maria Perez Echeverria 21371
+* Organización de computadoras y Assembler
+* Ciclo 1 - 2022
+*
+* Modificacion funciones y creacion de raiz & potencia
+ ----------------------------------------------- */
+
+  @@ codigo de assembler: se coloca en la seccion .text
 .text
 .align 2
     @@ etiqueta "main" llama a la funcion global
@@ -32,8 +42,6 @@ comp:
     beq div
     cmpne r4, #'^'
     beq pot
-    cmpne r4, #'r'
-    beq Raiz
     cmpne r4, #'='
     beq Res
     cmpne r4, #'q'
@@ -186,32 +194,6 @@ comp:
     bl printf
     b Menu
     @para ver resultado
-
-    /********************************/
-    /* raiz */
-    raiz:
-    @ingreso op2
-    ldr r0,=ingreso_op
-    bl puts
-    ldr r0, =entrada
-    ldr r1,=op2
-    bl scanf
-    @validacion
-    cmp r0,#0
-    beq Error
-    @calculo
-    ldr r6, =op1
-    ldr r8,[r6]
-    ldr r7,=op2
-    ldr r7,[r7]
-    fsqrt r8
-    @guarda y regresa
-    str r8,[r6]
-    ldr r0,=res
-    ldr r1,=op1
-    ldr r1,[r1]
-    bl printf
-    b Menu
 
 Res:
 /*carga, muestra y regresa*/
